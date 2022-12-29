@@ -24,12 +24,17 @@ app.use(
   })
 );
 try {
-  mongoose.connect("mongodb://localhost:27017/freemesikho");
+  mongoose.connect(
+    "mongodb+srv://vercel-admin-user:bX3uM28wdUdXKgC8@cluster0.ytbgztf.mongodb.net/freemesikho?retryWrites=true&w=majority"
+  );
   console.log("connected mongo");
 } catch (error) {
   console.log(error);
 }
 
+app.get("/", (req, res) => {
+  res.status(200).json({ success: true });
+});
 app.use("/api", require("./student/login"));
 app.use("/api", require("./student/register"));
 app.use("/api", require("./admin/checkadmin"));
