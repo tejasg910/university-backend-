@@ -23,9 +23,7 @@ app.use(
   })
 );
 try {
-  mongoose.connect(
-    "mongodb+srv://vercel-admin-user:bX3uM28wdUdXKgC8@cluster0.ytbgztf.mongodb.net/freemesikho?retryWrites=true&w=majority"
-  );
+  mongoose.connect("mongodb://127.0.0.1:27017/freemesikho");
   console.log("connected mongo");
 } catch (error) {
   console.log(error);
