@@ -38,6 +38,7 @@ app.use("/api", require("./admin/registeradmin"));
 app.use("/api", require("./admin/adminlogin"));
 app.use("/api", require("./admin/getcourses"));
 app.use("/api", require("./admin/setcoursestatus"));
+app.use("/api", require("./admin/getallstudents"));
 
 app.use("/api", require("./college/dashboard"));
 
