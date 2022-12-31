@@ -20,7 +20,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://university-frontend.vercel.app/",
+    origin: "https://university-frontend.vercel.app",
+    credentials: true,
   })
 );
 
