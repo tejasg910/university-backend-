@@ -17,11 +17,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-app.use(
-  cors({
-    origin: "https://university-frontend.vercel.app",
-  })
-);
+
 try {
   mongoose.connect("mongodb://127.0.0.1:27017/freemesikho");
   console.log("connected mongo");
