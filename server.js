@@ -18,8 +18,16 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(
+  cors({
+    origin: "https://university-frontend.vercel.app/",
+  })
+);
+
 try {
-  mongoose.connect("mongodb://127.0.0.1:27017/freemesikho");
+  mongoose.connect(
+    "mongodb+srv://vercel-admin-user:bX3uM28wdUdXKgC8@cluster0.ytbgztf.mongodb.net/freemesikho?retryWrites=true&w=majority"
+  );
   console.log("connected mongo");
 } catch (error) {
   console.log(error);
